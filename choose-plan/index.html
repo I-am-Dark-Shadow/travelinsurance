@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare and choose the best travel insurance plan for your trip to Australia.">
+    <title>Choose Your Plan - Travel Insurance</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="container header-wrapper">
+            <a href="../index.html" class="back-link">
+                <img src="../assets/back.svg" alt="Logoipsum" class="arrow-icon"> Back
+            </a>
+            <div class="logo">
+                <img src="../assets/logo.svg" alt="Logoipsum"> 
+            </div>
+            <div class="header-spacer"></div> </div>
+    </header>
+
+    <section class="progress-section">
+        <div class="container">
+            <ul class="progress-bar">
+                <li class="step completed">
+                    <div class="step-icon">
+                        <img src="../assets/tick.svg" alt="Completed">
+                    </div>
+                    <span class="step-text">Get Quote</span>
+                </li>
+                <li class="step active">
+                    <div class="step-icon plane-icon">
+                        <img src="../assets/plane.svg" alt="Current Step">
+                    </div>
+                    <span class="step-text">Plan Option</span>
+                </li>
+                <li class="step">
+                    <div class="step-circle"></div>
+                    <span class="step-text">Travellers</span>
+                </li>
+                <li class="step">
+                    <div class="step-circle"></div>
+                    <span class="step-text">Payment</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="summary-section">
+        <div class="container summary-wrapper">
+            <div class="summary-item">
+                <span class="label">Destination(s):</span>
+                <span class="value">Australia</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Dates:</span>
+                <span class="value">04/11/2025 - 13/11/2025</span>
+            </div>
+            <div class="summary-item">
+                <span class="label">Traveller Ages:</span>
+                <span class="value">23</span>
+            </div>
+            <button class="edit-btn">Edit</button>
+        </div>
+    </section>
+
+    <main class="container plan-container">
+        
+        <div class="mobile-plan-tabs">
+            <button class="plan-tab" onclick="switchPlan('voyager')">
+                <span class="tab-name">VOYAGER</span>
+                <span class="tab-price">$15.98</span>
+            </button>
+            <button class="plan-tab active" onclick="switchPlan('voyager-plus')">
+                <span class="tab-name">VOYAGER PLUS</span>
+                <span class="tab-price text-yellow">$41.34</span>
+            </button>
+        </div>
+
+        <div class="comparison-grid" id="comparisonGrid">
+            
+            <div class="grid-header desktop-only"></div> <div class="plan-header-card" data-plan="voyager">
+                <div class="plan-icon navy-bg">
+                    <div class="icon-shape">
+                        <img src="../assets/smlogonevy.svg" alt="Voyager">
+                    </div>
+                </div>
+                <h3>VOYAGER</h3>
+                <p class="from-price">From $17.37</p>
+                <div class="big-price">
+                    $15<span class="cents">.98</span>
+                </div>
+                <p class="total-label">Total Cost</p>
+                <p class="disclaimer">Policy benefits listed below, per traveller limits apply</p>
+            </div>
+
+            <div class="plan-header-card recommended" data-plan="voyager-plus">
+                <div class="plan-icon yellow-bg">
+                    <div class="icon-shape">
+                        <img src="../assets/smlogoyellow.svg" alt="Voyager Plus">
+                    </div>
+                </div>
+                <h3>VOYAGER PLUS</h3>
+                <p class="from-price">From $44.94</p>
+                <div class="big-price yellow-text">
+                    $41<span class="cents">.34</span>
+                </div>
+                <p class="total-label">Total Cost</p>
+                <p class="disclaimer">Policy benefits listed below, per traveller limits apply</p>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-name">
+                    Cancellation or trip interruption <span class="info-icon">ⓘ</span>
+                </div>
+                <div class="feature-val" data-plan="voyager">$1,000</div>
+                <div class="feature-val" data-plan="voyager-plus">
+                    <select class="custom-select">
+                        <option>$4,000</option>
+                        <option>$5,000</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-name">
+                    Luggage and personal effects <span class="info-icon">ⓘ</span>
+                </div>
+                <div class="feature-val" data-plan="voyager">$500</div>
+                <div class="feature-val" data-plan="voyager-plus">
+                    <select class="custom-select">
+                        <option>$1,000</option>
+                        <option>$2,000</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-name">Travel Delay <span class="info-icon">ⓘ</span></div>
+                <div class="feature-val gray-text" data-plan="voyager">not available</div>
+                <div class="feature-val" data-plan="voyager-plus">$1,000</div>
+            </div>
+
+            <div class="feature-row">
+                <div class="feature-name">Personal Liability <span class="info-icon">ⓘ</span></div>
+                <div class="feature-val gray-text" data-plan="voyager">not available</div>
+                <div class="feature-val" data-plan="voyager-plus">$2,500,000</div>
+            </div>
+
+            <div class="section-divider">Optional Cover</div>
+
+            <div class="feature-row">
+                <div class="feature-name">Rental Vehicle Excess <span class="info-icon">ⓘ</span></div>
+                <div class="feature-val gray-text" data-plan="voyager">not available</div>
+                <div class="feature-val" data-plan="voyager-plus">
+                    <select class="custom-select">
+                        <option>Not Selected</option>
+                        <option>Cover Added</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-footer desktop-only">
+                <a href="#" class="link-blue">Show All Benefits</a>
+            </div>
+
+            <div class="grid-footer" data-plan="voyager">
+                <button class="btn-choose navy">CHOOSE PLAN</button>
+                <a href="#" class="link-small">View Policy Information</a>
+            </div>
+
+            <div class="grid-footer" data-plan="voyager-plus">
+                <button class="btn-choose yellow">CHOOSE PLAN</button>
+                <a href="#" class="link-small">View Policy Information</a>
+                <a href="#" class="link-blue mobile-only">Show all benefits</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>©2025 Logo Ipsum. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

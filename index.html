@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get the best travel insurance quotes. Secure your journey today.">
+    <title>Travel Insurance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-overlay" id="pageOverlay"></div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="/" class="logo">
+                <img src="assets/logo.svg" alt="Go to homepage" class="logo-img">
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="#" id="desktopInsuranceBtn" aria-expanded="false">
+                            Travel Insurance <span class="arrow">
+                                <img src="/assets/arrow-down.svg" alt="arrow">
+                            </span>
+                        </a>
+                    </li>
+                    <li><a href="#">Emergency Assistance</a></li>
+                    <li>
+                        <a href="#">Customer Service <span class="arrow">
+                                <img src="/assets/arrow-down.svg" alt="arrow">
+                            </span>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div class="mega-menu" id="megaMenu" aria-hidden="true">
+            <div class="container mega-content">
+                <div class="mega-image">
+                    <img src="assets/family.svg" alt="Family Home">
+                </div>
+                <div class="mega-text">
+                    <h3>Travel Insurance</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam gravida tincidunt mi, in bibendum
+                        sapien pellentesque vitae.</p>
+                    <a href="/choose-plan/index.html" class=""><button class="mega-cta">GET A QUOTE</button></a>
+                </div>
+                <div class="mega-links">
+                    <ul>
+                        <li><a href="#">Plans</a></li>
+                        <li><a href="#">Upgrades</a></li>
+                        <li><a href="#">Traveller Type</a></li>
+                        <li><a href="#">Trip Type</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobileNav">
+
+        <div class="mobile-header">
+            <img src="assets/logo.svg" alt="Logo" class="mobile-logo">
+            <button class="close-menu-btn" id="closeMobileBtn" aria-label="Close Menu">✕</button>
+        </div>
+
+        <div class="mobile-links-container">
+            <ul class="mobile-menu-list">
+
+                <li class="mobile-item has-submenu">
+                    <div class="mobile-link-header" id="mobileInsBtn">
+                        <span>Travel Insurance</span>
+                        <span class="mobile-arrow">
+                            <img src="/assets/arrow-down.svg" alt="arrow">
+                        </span>
+                    </div>
+                    <ul class="mobile-submenu" id="mobileInsSubmenu">
+                        <li><a href="#">Plans</a></li>
+                        <li><a href="#">Upgrades</a></li>
+                        <li><a href="#">Traveller Type</a></li>
+                        <li><a href="#">Trip Type</a></li>
+                        <li><a href="#">Benefits</a></li>
+                    </ul>
+                </li>
+
+                <li class="mobile-item"><a href="#">Emergency Assistance</a></li>
+
+                <li class="mobile-item has-submenu">
+                    <div class="mobile-link-header">
+                        <span>Customer Service</span>
+                        <span class="mobile-arrow">
+                            <img src="/assets/arrow-down.svg" alt="arrow">
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-section" lazy="loaded">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="sub-headline">BREAKING THE LIMITS OF TRADITIONAL TRAVEL INSURANCE</p>
+                    <h1>Find the Right Plan for You</h1>
+                </div>
+
+                <div class="quote-component">
+                    <div class="tab-group">
+                        <button class="tab-btn" data-tab="single">Single Trip</button>
+                        <button class="tab-btn active" data-tab="multi">Multi Trip</button>
+                    </div>
+                    <form class="quote-form" id="insuranceForm">
+                        <div class="form-group">
+                            <label for="destinationInput">Where are you travelling?</label>
+
+                            <div class="input-wrapper select-style">
+                                <input type="text" id="destinationInput" placeholder="Type or choose your destinations"
+                                    autocomplete="off" />
+                                <span class="chevron">
+                                    <img src="/assets/arrow-down.svg" alt="arrow">
+                                </span>
+                            </div>
+
+                            <!-- Dropdown -->
+                            <div id="destinationDropdown" class="destination-dropdown"></div>
+
+                            <!-- Selected tags -->
+                            <div class="tags-container" id="tagsContainer"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="leaveDate">When do you leave?</label>
+                            <input type="date" id="leaveDate" class="date-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="returnDate">When do you return?</label>
+                            <input type="date" id="returnDate" class="date-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="age-1">Current age of all Travellers?</label>
+                            <div class="age-input-group" id="ageWrapper">
+                                <div class="age-box">
+                                    <input type="number" id="age-1" aria-label="Traveller age">
+                                </div>
+                                <button type="button" class="add-age-btn" id="addAgeBtn">+</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="promoCode" class="visually-hidden">Promo Code</label>
+                            <input type="text" id="promoCode" placeholder="Promo Code" class="promo-input" />
+                        </div>
+                        <button type="submit" class="cta-button" aria-label="Get travel insurance quote">GET A
+                            QUOTE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js" defer></script>
+
+</body>
+
+</html>
