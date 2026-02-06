@@ -40,7 +40,7 @@ This project simulates a real-world insurance journey — from selecting destina
 
 ---
 
-## Project Structure 📂
+## Project Structure 
 
 ```
 Travel Insurance/
@@ -61,7 +61,7 @@ Travel Insurance/
 
 ---
 
-## Key Features 🚀
+## Key Features 
 
 ### Destination Selection with Smart Dropdown
 Users can search and select destinations using a custom-built dropdown component.
@@ -117,7 +117,7 @@ Accessibility was a major focus while building this project.
 
 ---
 
-## SEO Optimization 🚀
+## SEO Optimization 
 
 This project achieves **excellent SEO and Lighthouse scores**, making it production-ready.
 
@@ -137,7 +137,7 @@ This project achieves **excellent SEO and Lighthouse scores**, making it product
 
 ---
 
-## Responsive Design 📱💻
+## Responsive Design 
 
 ### Desktop Experience
 - Mega menu navigation
@@ -151,7 +151,7 @@ This project achieves **excellent SEO and Lighthouse scores**, making it product
 
 ---
 
-## Insurance Plan Comparison 🧾
+## Insurance Plan Comparison 
 
 ### Desktop View
 - Full comparison between **Voyager** and **Voyager Plus**
@@ -163,7 +163,7 @@ This project achieves **excellent SEO and Lighthouse scores**, making it product
 
 ---
 
-## Code Quality & Best Practices 🧠
+## Code Quality & Best Practices 
 
 ### JavaScript
 - Clean logic
@@ -188,7 +188,7 @@ This project achieves **excellent SEO and Lighthouse scores**, making it product
 
 ---
 
-## Future Enhancements 🔮
+## Future Enhancements 
 
 ### Planned Improvements
 - Backend & API integration
@@ -196,7 +196,7 @@ This project achieves **excellent SEO and Lighthouse scores**, making it product
 
 ---
 
-## Author 👨‍💻
+## Author 
 
 **SuvroDip Chakroborty**  
 B.Tech in Computer Science & Engineering  
